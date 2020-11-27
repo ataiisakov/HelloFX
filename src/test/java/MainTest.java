@@ -23,4 +23,8 @@ class MainTest {
     void test5() {
         Assertions.assertTrue(true);
     }
+    @Test
+    void test6() {
+        Assertions.assertTrue(false);
+    }
 }
