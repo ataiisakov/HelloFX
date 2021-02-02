@@ -18,7 +18,7 @@ public class Main extends Application {
     private Stage stage;
 
 
-    private Pane makePane(){
+    public Pane makePane(){
         Pane pane = new Pane();
         pane.setPrefSize(50 * 9, 50 * 9);
         this.grid = new Cell[9][9];
@@ -103,7 +103,7 @@ public class Main extends Application {
                 alert.setTitle("You lost!");
                 alert.showAndWait().ifPresent(response ->{
                     if (response == ButtonType.OK) {
-                        stage.close();
+                        scene.setRoot(makePane());
                     }
                 });
                 return;
